@@ -14,6 +14,7 @@ sentiment_analyzer_url = os.getenv(
 
 # def get_request(endpoint, **kwargs):
 # Add code for get requests to back end
+
 def get_request(endpoint, **kwargs):
     params = ""
     if kwargs:
@@ -33,7 +34,7 @@ def get_request(endpoint, **kwargs):
 
 
 def analyze_review_sentiments(text):
-    request_url = sentiment_analyzer_url+"analyze/"+text
+    request_url = sentiment_analyzer_url + "analyze/" + text
     try:
         # Call get method of requests library with URL and parameters
         response = requests.get(request_url)

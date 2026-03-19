@@ -1,7 +1,6 @@
 # Uncomment the required imports before adding the code
 
 from django.contrib.auth.models import User
-from django.shortcuts import render
 from django.contrib.auth import logout
 
 from django.http import JsonResponse
@@ -155,4 +154,5 @@ def get_cars(request):
             {"CarModel": car_model.name, "CarMake": car_model.car_make.name}
         )
     return JsonResponse({"CarModels": cars})
+
 
